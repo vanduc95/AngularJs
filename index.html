@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="libs/angular.min.js"></script>
+
+    </head>
+
+    <!--Start App-->
+    <body ng-app="CalculatorApp" ng-controller="CalculatorController">
+        <div class='container' >
+            <div class='calculator' >
+
+                <div  class='text-center title'>
+                    <h4><b>Casio Plus 750MS</b></h4>
+                </div>
+
+                <!-- Entry Box -->
+                <div class='text-right entrybox'>
+                    <div class='entry'>{{answer}}</div>
+                </div>
+                <!--End Entry Box-->
+
+
+                <!--Keypad Box-->
+                <div class="keypad">
+
+                    <button class='red' value='ac' ng-click="handleClick('ac')">AC</button>
+                    <button class='red' value='ce' ng-click="handleClick('ce')">CE</button>
+
+
+                    <button value='7' ng-click="handleClick('7')">7</button>
+                    <button value='8' ng-click="handleClick('8')">8</button>
+                    <button value='9' ng-click="handleClick('9')">9</button>
+                    <button class='white' value='+' ng-click="handleClick('+')">+</button>
+
+
+                    <button value='4' ng-click="handleClick('4')">4</button>
+                    <button value='5' ng-click="handleClick('5')">5</button>
+                    <button value='6' ng-click="handleClick('6')">6</button>
+                    <button class='white' value='-' ng-click="handleClick('-')">-</button>
+
+
+                    <button value='1' ng-click="handleClick('1')">1</button>
+                    <button value='2' ng-click="handleClick('2')">2</button>
+                    <button value='3' ng-click="handleClick('3')">3</button>
+                    <button class='white' value='x' ng-click="handleClick('x')">x</button>
+
+
+                    <button value='.' ng-click="handleClick('.')">.</button>
+                    <button value='0' ng-click="handleClick('0')">0</button>
+                    <button class='blue' value='=' ng-click="handleClick('=')">=</button>
+                    <button class='white' value='÷' ng-click="handleClick('÷')">÷</button>
+
+                </div>
+                <!--End Keypad Box-->
+            </div>
+        </div>
+
+        <script src="js/index.js"></script>
+
+    </body>
+    <!--End App-->
+</html>
